@@ -22,7 +22,7 @@ jobs:
     - name: Build WebGoat.NET
       run: dotnet build WebGoat.NET
     - name: Analyze with inspect
-      run: .\sl analyze --sca --app netcoreConsole --tag branch=$Env:GITHUB_REF --verbose --oss-recursive --oss-project-dir WebGoat.NET --csharp --dotnet-core --cpg WebGoat.NET.csproj
+      run: .\sl analyze --sca --app WebGoat.NET --tag branch=$Env:GITHUB_REF --verbose --oss-recursive --oss-project-dir WebGoat --csharp --dotnet-core --cpg WebGoat/WebGoat.NET.csproj
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
 
